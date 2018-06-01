@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="我的账户"
+        android:id="@+id/mnuUser"/>
+    <item android:title="添加书籍"
+        android:id="@+id/mnuAddBook"/>
+    <item android:title="编辑书籍"
+        android:id="@+id/mnuAlterBook"/>
+    <item android:title="关于"
+    android:id="@+id/mnuMainAbout"/>
+    <item android:title="退出"
+        android:id="@+id/mnuMainClose"/>
+</menu>
