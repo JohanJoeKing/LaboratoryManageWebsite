@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.johan.dailyoutcome.MainActivity">
+
+    <!-- 相对布局 -->
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <!--
+            使用滑动条显示，可显示更多的事件
+            该版本APP固定显示15个事件条目
+            为空的按0元计算
+        -->
+        <ScrollView
+            android:id="@+id/scv"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+
+            <!--
+                ScrollView内的相对嵌套
+            -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <!--
+                    每行的条目用一个RelativeLayout封装，
+                    包括三个编辑框控件，分别是事件的名称，事件的数量，事件的花费
+                -->
+                <!--
+                    第1个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName1"
+                        android:hint="消费事件1"
+                        android:text="早餐"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount1"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName1"
+                        android:layout_toEndOf="@+id/eventName1"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome1"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount1"
+                        android:layout_toEndOf="@+id/eventAmount1"
+                        android:background="@android:drawable/edit_text"/>
+                <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第2个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName2"
+                        android:hint="消费事件2"
+                        android:text="午餐"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount2"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName2"
+                        android:layout_toEndOf="@+id/eventName2"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome2"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount2"
+                        android:layout_toEndOf="@+id/eventAmount2"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第3个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName3"
+                        android:hint="消费事件3"
+                        android:text="晚餐"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount3"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName3"
+                        android:layout_toEndOf="@+id/eventName3"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome3"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount3"
+                        android:layout_toEndOf="@+id/eventAmount3"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第4个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName4"
+                        android:hint="消费事件4"
+                        android:text="话费"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount4"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName4"
+                        android:layout_toEndOf="@+id/eventName4"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome4"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount4"
+                        android:layout_toEndOf="@+id/eventAmount4"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第5个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName5"
+                        android:hint="消费事件5"
+                        android:text="房租"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount5"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName5"
+                        android:layout_toEndOf="@+id/eventName5"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome5"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount5"
+                        android:layout_toEndOf="@+id/eventAmount5"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第6个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName6"
+                        android:hint="消费事件6"
+                        android:text="水费"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount6"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName6"
+                        android:layout_toEndOf="@+id/eventName6"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome6"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount6"
+                        android:layout_toEndOf="@+id/eventAmount6"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第7个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay6"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName7"
+                        android:hint="消费事件7"
+                        android:text="电费"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount7"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName7"
+                        android:layout_toEndOf="@+id/eventName7"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome7"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount7"
+                        android:layout_toEndOf="@+id/eventAmount7"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第8个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay7"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName8"
+                        android:hint="消费事件8"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount8"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName8"
+                        android:layout_toEndOf="@+id/eventName8"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome8"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount8"
+                        android:layout_toEndOf="@+id/eventAmount8"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第9个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay8"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName9"
+                        android:hint="消费事件9"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount9"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName9"
+                        android:layout_toEndOf="@+id/eventName9"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome9"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount9"
+                        android:layout_toEndOf="@+id/eventAmount9"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第10个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay9"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName10"
+                        android:hint="消费事件10"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount10"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName10"
+                        android:layout_toEndOf="@+id/eventName10"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome10"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount10"
+                        android:layout_toEndOf="@+id/eventAmount10"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第11个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay10"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName11"
+                        android:hint="消费事件11"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount11"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName11"
+                        android:layout_toEndOf="@+id/eventName11"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome11"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount11"
+                        android:layout_toEndOf="@+id/eventAmount11"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第12个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay11"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName12"
+                        android:hint="消费事件12"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount12"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName12"
+                        android:layout_toEndOf="@+id/eventName12"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome12"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount12"
+                        android:layout_toEndOf="@+id/eventAmount12"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第13个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay12"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName13"
+                        android:hint="消费事件13"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount13"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName13"
+                        android:layout_toEndOf="@+id/eventName13"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome13"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount13"
+                        android:layout_toEndOf="@+id/eventAmount13"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第14个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay13"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName14"
+                        android:hint="消费事件14"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount14"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName14"
+                        android:layout_toEndOf="@+id/eventName14"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome14"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount14"
+                        android:layout_toEndOf="@+id/eventAmount14"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+                <!--
+                    第15个条目
+                -->
+                <RelativeLayout
+                    android:id="@+id/relay15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relay14"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    >
+                    <!-- 事件的名称 -->
+                    <EditText
+                        android:id="@+id/eventName15"
+                        android:hint="消费事件15"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的数量 -->
+                    <EditText
+                        android:id="@+id/eventAmount15"
+                        android:hint="次数"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventName15"
+                        android:layout_toEndOf="@+id/eventName15"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 事件的花费 -->
+                    <EditText
+                        android:id="@+id/eventOutcome15"
+                        android:hint="金额"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/eventAmount15"
+                        android:layout_toEndOf="@+id/eventAmount15"
+                        android:background="@android:drawable/edit_text"/>
+                    <!-- 条目相对嵌套标签结束 -->
+                </RelativeLayout>
+
+            <!-- ScrollView内的相对嵌套标签结束 -->
+            </RelativeLayout>
+        </ScrollView>
+
+        <!--
+            开始计算按钮
+        -->
+        <Button
+            android:id="@+id/calButton"
+            android:text="开始计算"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scv"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="button_calculateOnClick"/>
+
+        <!--
+            计算结果显示
+        -->
+        <TextView
+            android:id="@+id/outcomeText"
+            android:text="计划总消费："
+            android:textSize="20dp"
+            android:textColor="#ff4500"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
