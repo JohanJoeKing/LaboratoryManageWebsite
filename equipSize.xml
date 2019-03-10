@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<lab>
+	<equip>
+		<size>微型</size>
+		<type>1</type>
+	</equip>
+	<equip>
+		<size>小型</size>
+		<type>2</type>
+	</equip>
+	<equip>
+		<size>中型</size>
+		<type>3</type>
+	</equip>
+	<equip>
+		<size>大型</size>
+		<type>4</type>
+	</equip>
+	<equip>
+		<size>其他</size>
+		<type>5</type>
+	</equip>
+</lab>
